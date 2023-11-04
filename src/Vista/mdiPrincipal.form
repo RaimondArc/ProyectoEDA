@@ -153,14 +153,14 @@
                       <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton1" min="-2" pref="184" max="-2" attributes="0"/>
+                              <Component id="btnEnPistaAterrizaje" min="-2" pref="184" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jButton4" pref="184" max="32767" attributes="0"/>
-                                  <Component id="jButton3" pref="184" max="32767" attributes="0"/>
-                                  <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnEnPistaDespegue" pref="184" max="32767" attributes="0"/>
+                                  <Component id="btnEnHangar" pref="184" max="32767" attributes="0"/>
+                                  <Component id="btnEnVuelo" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="442" pref="706" max="32767" attributes="0"/>
                           </Group>
@@ -172,49 +172,49 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnEnVuelo" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnEnHangar" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnEnPistaDespegue" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="btnEnPistaAterrizaje" min="-2" pref="46" max="-2" attributes="0"/>
                       <EmptySpace pref="185" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="btnEnPistaAterrizaje">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aviones en Pista de Aterrizaje"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnPistaAterrizajeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnEnVuelo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aviones en Vuelo"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnVueloActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="btnEnHangar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aviones en el Hangar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnHangarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="btnEnPistaDespegue">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aviones en Pista de Despegue"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnPistaDespegueActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

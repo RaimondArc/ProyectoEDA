@@ -28,10 +28,10 @@ public class mdiPrincipal extends javax.swing.JFrame {
 
         desktopPane = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnEnPistaAterrizaje = new javax.swing.JButton();
+        btnEnVuelo = new javax.swing.JButton();
+        btnEnHangar = new javax.swing.JButton();
+        btnEnPistaDespegue = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -51,31 +51,31 @@ public class mdiPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(28, 33, 53));
 
-        jButton1.setText("Aviones en Pista de Aterrizaje");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEnPistaAterrizaje.setText("Aviones en Pista de Aterrizaje");
+        btnEnPistaAterrizaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEnPistaAterrizajeActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Aviones en Vuelo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEnVuelo.setText("Aviones en Vuelo");
+        btnEnVuelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEnVueloActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Aviones en el Hangar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnEnHangar.setText("Aviones en el Hangar");
+        btnEnHangar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnEnHangarActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Aviones en Pista de Despegue");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnEnPistaDespegue.setText("Aviones en Pista de Despegue");
+        btnEnPistaDespegue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnEnPistaDespegueActionPerformed(evt);
             }
         });
 
@@ -87,26 +87,26 @@ public class mdiPrincipal extends javax.swing.JFrame {
                 .addGap(240, 240, 240)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(btnEnHangar, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(btnEnVuelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(442, 706, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(144, 144, 144)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEnVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEnHangar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(185, Short.MAX_VALUE))
         );
 
@@ -194,21 +194,29 @@ public class mdiPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnEnPistaAterrizajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnPistaAterrizajeActionPerformed
+        JfrmPistaAterrizaje registrosNuevos = new JfrmPistaAterrizaje();
+        desktopPane.add(registrosNuevos);
+        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnEnPistaAterrizajeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnEnVueloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnVueloActionPerformed
+         jifrmAvionesvEnVuelo registrosNuevos = new jifrmAvionesvEnVuelo();
+        desktopPane.add(registrosNuevos);
+        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnEnVueloActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnEnHangarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnHangarActionPerformed
+        jifrmAvionesEnHangar registrosNuevos = new jifrmAvionesEnHangar();
+        desktopPane.add(registrosNuevos);
+        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnEnHangarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btnEnPistaDespegueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnPistaDespegueActionPerformed
+        JfrmPistaDespegue registrosNuevos = new JfrmPistaDespegue();
+        desktopPane.add(registrosNuevos);
+        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btnEnPistaDespegueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +255,10 @@ public class mdiPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
+    private javax.swing.JButton btnEnHangar;
+    private javax.swing.JButton btnEnPistaAterrizaje;
+    private javax.swing.JButton btnEnPistaDespegue;
+    private javax.swing.JButton btnEnVuelo;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
@@ -256,10 +268,6 @@ public class mdiPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;

@@ -35,6 +35,8 @@ public class jifrmAvionesvEnVuelo extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         btnAñadir = new javax.swing.JButton();
 
+        setClosable(true);
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 24)); // NOI18N
