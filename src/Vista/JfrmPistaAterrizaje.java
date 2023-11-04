@@ -32,6 +32,9 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         jTable7 = new javax.swing.JTable();
         jButton7 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setClosable(true);
 
@@ -39,12 +42,14 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
 
         jLabel19.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 24)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel19.setText("Lista de aterrizaje");
+        jLabel19.setText("Lista de Aviones");
 
         jLabel20.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 24)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("Pista de aterrizaje");
+        jLabel20.setText("AVIONES EN PISTA DE ATERRIZAJE");
 
+        jTable7.setBackground(new java.awt.Color(255, 255, 255));
+        jTable7.setForeground(new java.awt.Color(0, 0, 0));
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -72,15 +77,31 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
                 "Orden ", "Nombre de avión"
             }
         ));
+        jTable7.setRowHeight(22);
         jScrollPane7.setViewportView(jTable7);
 
         jButton7.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
-        jButton7.setText("AÑADIR AVIÓN");
+        jButton7.setText("Añadir avión");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
+
+        jLabel21.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Opciones");
+
+        jButton8.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jButton8.setText("Trasladar al hangar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jSeparator1.setBackground(new java.awt.Color(95, 104, 143));
+        jSeparator1.setForeground(new java.awt.Color(95, 104, 143));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -89,34 +110,52 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(165, 165, 165)
-                        .addComponent(jButton7))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel20))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addComponent(jLabel19)))
-                .addContainerGap(180, Short.MAX_VALUE))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(93, 93, 93)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addGap(184, 184, 184)
+                                        .addComponent(jLabel21))
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addGap(129, 129, 129)
+                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel19))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 20, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 994, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel20)
-                .addGap(47, 47, 47)
-                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(34, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7)
-                        .addGap(147, 147, 147))))
+                        .addComponent(jLabel21)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel19)
+                        .addGap(27, 27, 27)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(45, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,9 +166,7 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -139,13 +176,20 @@ public class JfrmPistaAterrizaje extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable7;
     // End of variables declaration//GEN-END:variables
 }

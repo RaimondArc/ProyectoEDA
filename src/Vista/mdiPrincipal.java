@@ -28,10 +28,16 @@ public class mdiPrincipal extends javax.swing.JFrame {
 
         desktopPane = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        btnEnPistaAterrizaje = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         btnEnVuelo = new javax.swing.JButton();
         btnEnHangar = new javax.swing.JButton();
         btnEnPistaDespegue = new javax.swing.JButton();
+        btnEnPistaAterrizaje = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -51,13 +57,12 @@ public class mdiPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(28, 33, 53));
 
-        btnEnPistaAterrizaje.setText("Aviones en Pista de Aterrizaje");
-        btnEnPistaAterrizaje.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEnPistaAterrizajeActionPerformed(evt);
-            }
-        });
+        jPanel2.setBackground(new java.awt.Color(28, 33, 53));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(95, 104, 143)));
 
+        btnEnVuelo.setBackground(new java.awt.Color(255, 255, 255));
+        btnEnVuelo.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        btnEnVuelo.setForeground(new java.awt.Color(28, 33, 53));
         btnEnVuelo.setText("Aviones en Vuelo");
         btnEnVuelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +70,9 @@ public class mdiPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnEnHangar.setBackground(new java.awt.Color(255, 255, 255));
+        btnEnHangar.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        btnEnHangar.setForeground(new java.awt.Color(28, 33, 53));
         btnEnHangar.setText("Aviones en el Hangar");
         btnEnHangar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +80,9 @@ public class mdiPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnEnPistaDespegue.setBackground(new java.awt.Color(255, 255, 255));
+        btnEnPistaDespegue.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        btnEnPistaDespegue.setForeground(new java.awt.Color(28, 33, 53));
         btnEnPistaDespegue.setText("Aviones en Pista de Despegue");
         btnEnPistaDespegue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,35 +90,121 @@ public class mdiPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnEnPistaAterrizaje.setBackground(new java.awt.Color(255, 255, 255));
+        btnEnPistaAterrizaje.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        btnEnPistaAterrizaje.setForeground(new java.awt.Color(28, 33, 53));
+        btnEnPistaAterrizaje.setText("Aviones en Pista de Aterrizaje");
+        btnEnPistaAterrizaje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnPistaAterrizajeActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(183, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnEnVuelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEnHangar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(172, 172, 172))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(btnEnVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(btnEnHangar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(95, 104, 143));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("Configuración");
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
+        );
+
+        jSeparator1.setBackground(new java.awt.Color(95, 104, 143));
+        jSeparator1.setForeground(new java.awt.Color(95, 104, 143));
+
+        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("En Simulación...");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(240, 240, 240)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jSeparator1)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                            .addComponent(btnEnHangar, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                            .addComponent(btnEnVuelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(442, 706, Short.MAX_VALUE))))
+                        .addGap(82, 82, 82)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 82, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(btnEnVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(btnEnHangar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(btnEnPistaDespegue, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(btnEnPistaAterrizaje, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(185, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(64, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         desktopPane.add(jPanel1);
@@ -195,28 +292,32 @@ public class mdiPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void btnEnPistaAterrizajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnPistaAterrizajeActionPerformed
-        JfrmPistaAterrizaje registrosNuevos = new JfrmPistaAterrizaje();
-        desktopPane.add(registrosNuevos);
-        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+        JfrmPistaAterrizaje ventana = new JfrmPistaAterrizaje();
+        desktopPane.add(ventana);
+        ventana.setVisible(true);
     }//GEN-LAST:event_btnEnPistaAterrizajeActionPerformed
 
     private void btnEnVueloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnVueloActionPerformed
-         jifrmAvionesvEnVuelo registrosNuevos = new jifrmAvionesvEnVuelo();
-        desktopPane.add(registrosNuevos);
-        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+         jifrmAvionesvEnVuelo ventana = new jifrmAvionesvEnVuelo();
+        desktopPane.add(ventana);
+        ventana.setVisible(true);
     }//GEN-LAST:event_btnEnVueloActionPerformed
 
     private void btnEnHangarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnHangarActionPerformed
-        jifrmAvionesEnHangar registrosNuevos = new jifrmAvionesEnHangar();
-        desktopPane.add(registrosNuevos);
-        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+        jifrmAvionesEnHangar ventana = new jifrmAvionesEnHangar();
+        desktopPane.add(ventana);
+        ventana.setVisible(true);
     }//GEN-LAST:event_btnEnHangarActionPerformed
 
     private void btnEnPistaDespegueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnPistaDespegueActionPerformed
-        JfrmPistaDespegue registrosNuevos = new JfrmPistaDespegue();
-        desktopPane.add(registrosNuevos);
-        registrosNuevos.setVisible(rootPaneCheckingEnabled);
+         JfrmPistaDespegue ventana = new JfrmPistaDespegue();
+        desktopPane.add(ventana);
+        ventana.setVisible(true);
     }//GEN-LAST:event_btnEnPistaDespegueActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,7 +369,13 @@ public class mdiPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
