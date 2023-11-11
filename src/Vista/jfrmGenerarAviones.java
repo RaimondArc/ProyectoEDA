@@ -6,6 +6,9 @@ package Vista;
 
 import Logica.clsAviones;
 import Logica.clsListasAviones;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -20,6 +23,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
      */
     public jfrmGenerarAviones() {
         initComponents();
+        inicializarPopUpMenu();
     }
 
     /**
@@ -31,6 +35,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menuTabla = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAviones = new javax.swing.JTable();
@@ -175,7 +180,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
         //Obtengo la cantidad de filas de la tabla
         int cantidadFilas = modelo.getRowCount();
         
-        boolean validacion = true;
+        boolean validacion = true; //Cambiará a false en caso de que encuentre alguna fila o celda vacía de la table
         for (int i = 0; i < cantidadFilas; i++) {
 
             if (modelo.getValueAt(i, 0) == null || modelo.getValueAt(i, 1).toString() == null || modelo.getValueAt(i, 2) == null || modelo.getValueAt(i, 3) == null) {
@@ -193,9 +198,20 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
                 //Añado un avión a la lista central
                 listaAviones.añadirCentral(avion);
             }
-
         }
+        
+        if (validacion) {
+            //Se abre la ventana principal del simulador
+            jfrmPrincipal ventana = new jfrmPrincipal();
+            ventana.setVisible(true);
 
+            //Se cierra la ventana de inicio
+            jfrmIniciarSimulacion ventanaAnterior = new jfrmIniciarSimulacion();
+            ventanaAnterior.dispose();
+
+            //Se cierra la ventana actual
+            this.dispose();
+        }
     }
 
     public boolean validaciones(){
@@ -212,13 +228,50 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
         }
         
     }
-    
+
+    public void inicializarPopUpMenu() {
+        //Se crean las opciones para el popup menu
+        JMenuItem agregar = new JMenuItem("Añadir fila");
+        JMenuItem eliminar = new JMenuItem("Borrar fila");
+
+        //Se añaden las opciones creadas al popup menu
+        menuTabla.add(agregar);
+        menuTabla.addSeparator();
+        menuTabla.add(eliminar);
+
+        //Se le añade a la tabla el popup menu
+        tblAviones.setComponentPopupMenu(menuTabla);
+
+        //Se le agrega las funcionalidades de agregar y eliminar filas a las opciones del popup menu
+        agregar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DefaultTableModel modelo = (DefaultTableModel) tblAviones.getModel();
+                modelo.addRow(new Object[]{null, null, null, null});//Se añade una fila vacía
+            }
+        });
+
+        eliminar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DefaultTableModel modelo = (DefaultTableModel) tblAviones.getModel();
+                int fila = tblAviones.getSelectedRow();
+                if (fila == -1) {    //Si el método getSelectedRow retorna -1 es porque no hay una fila seleccionada que borrar
+                    JOptionPane.showMessageDialog(null, "Para eliminar una fila debe seleccionarla", "Información", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    modelo.removeRow(fila);
+                }
+            }
+        });
+    }
+
+
   
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
         if (validaciones() == true) {
             leerDatos();
 
-            //Se abre la ventana principal del simulador
+            /*//Se abre la ventana principal del simulador
             jfrmPrincipal ventana = new jfrmPrincipal();
             ventana.setVisible(true);
 
@@ -227,7 +280,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
             ventanaAnterior.dispose();
 
             //Se cierra la ventana actual
-            this.dispose();
+            this.dispose();*/
         }
 
     }//GEN-LAST:event_btnIniciarActionPerformed
@@ -277,6 +330,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPopupMenu menuTabla;
     private javax.swing.JTable tblAviones;
     // End of variables declaration//GEN-END:variables
 }
