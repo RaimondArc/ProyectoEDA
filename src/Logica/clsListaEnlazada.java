@@ -37,5 +37,16 @@ public class clsListaEnlazada {
             return false;
         }
     }
+    
+    //El siguiente método de impresión es para pruebas
+    public void imprimirLista (){
+        Nodo aux = this.Lista;
+        
+        while (aux != null) {            
+            System.out.println(aux.avion.getModelo() + "\t" + aux.avion.getCantidadPasajeros() +
+                    "\t" + aux.avion.getCantidadSobrecargos()+ "\t" + aux.avion.getNombrePiloto());
+            aux = aux.siguiente;
+        }
+    }
 
 }

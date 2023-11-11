@@ -20,6 +20,23 @@ public class clsAviones {
         this.cantidadSobrecargos = cantidadSobrecargos;
         this.nombrePiloto = nombrePiloto;
     }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getCantidadPasajeros() {
+        return cantidadPasajeros;
+    }
+
+    public int getCantidadSobrecargos() {
+        return cantidadSobrecargos;
+    }
+
+    public String getNombrePiloto() {
+        return nombrePiloto;
+    }
+    
     
     
     
