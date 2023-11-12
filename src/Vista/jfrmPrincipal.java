@@ -40,12 +40,18 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         jpnlAvionesAterrizaje = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
+        jTabbedPane1.setBackground(new java.awt.Color(53, 79, 100));
         jTabbedPane1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+
+        jpnlAvionesVuelo.setBackground(new java.awt.Color(168, 194, 208));
 
         jTable2.setBackground(new java.awt.Color(255, 255, 255));
         jTable2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
@@ -84,7 +90,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         });
         jTable2.setGridColor(new java.awt.Color(204, 204, 204));
         jTable2.setRowHeight(25);
-        jTable2.setSelectionBackground(new java.awt.Color(232, 114, 69));
+        jTable2.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        jTable2.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jTable2.setShowGrid(true);
         jTable2.setShowVerticalLines(false);
         jScrollPane2.setViewportView(jTable2);
@@ -93,20 +100,22 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         jpnlAvionesVuelo.setLayout(jpnlAvionesVueloLayout);
         jpnlAvionesVueloLayout.setHorizontalGroup(
             jpnlAvionesVueloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesVueloLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+            .addGroup(jpnlAvionesVueloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1353, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jpnlAvionesVueloLayout.setVerticalGroup(
             jpnlAvionesVueloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnlAvionesVueloLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Aviones en Vuelo", jpnlAvionesVuelo);
+
+        jpnlAvionesHangar.setBackground(new java.awt.Color(168, 194, 208));
 
         jTable3.setBackground(new java.awt.Color(255, 255, 255));
         jTable3.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
@@ -145,7 +154,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         });
         jTable3.setGridColor(new java.awt.Color(204, 204, 204));
         jTable3.setRowHeight(25);
-        jTable3.setSelectionBackground(new java.awt.Color(232, 114, 69));
+        jTable3.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        jTable3.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jTable3.setShowGrid(true);
         jTable3.setShowVerticalLines(false);
         jScrollPane3.setViewportView(jTable3);
@@ -155,7 +165,7 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         jpnlAvionesHangarLayout.setHorizontalGroup(
             jpnlAvionesHangarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesHangarLayout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1240, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74))
         );
@@ -168,6 +178,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Aviones en Hangar", jpnlAvionesHangar);
+
+        jpnlAvionesDespegue.setBackground(new java.awt.Color(168, 194, 208));
 
         jTable4.setBackground(new java.awt.Color(255, 255, 255));
         jTable4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
@@ -206,7 +218,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         });
         jTable4.setGridColor(new java.awt.Color(204, 204, 204));
         jTable4.setRowHeight(25);
-        jTable4.setSelectionBackground(new java.awt.Color(232, 114, 69));
+        jTable4.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        jTable4.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jTable4.setShowGrid(true);
         jTable4.setShowVerticalLines(false);
         jScrollPane4.setViewportView(jTable4);
@@ -216,7 +229,7 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         jpnlAvionesDespegueLayout.setHorizontalGroup(
             jpnlAvionesDespegueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesDespegueLayout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
+                .addContainerGap(110, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91))
         );
@@ -229,6 +242,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Aviones en Pista de Despegue", jpnlAvionesDespegue);
+
+        jpnlAvionesAterrizaje.setBackground(new java.awt.Color(168, 194, 208));
 
         jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
@@ -267,7 +282,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
         });
         jTable1.setGridColor(new java.awt.Color(204, 204, 204));
         jTable1.setRowHeight(25);
-        jTable1.setSelectionBackground(new java.awt.Color(232, 114, 69));
+        jTable1.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        jTable1.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jTable1.setShowGrid(true);
         jTable1.setShowVerticalLines(false);
         jScrollPane1.setViewportView(jTable1);
@@ -279,7 +295,7 @@ public class jfrmPrincipal extends javax.swing.JFrame {
             .addGroup(jpnlAvionesAterrizajeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         jpnlAvionesAterrizajeLayout.setVerticalGroup(
             jpnlAvionesAterrizajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,21 +307,47 @@ public class jfrmPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Aviones en Pista de Despegue", jpnlAvionesAterrizaje);
 
+        jPanel1.setBackground(new java.awt.Color(53, 79, 100));
+
+        jLabel1.setBackground(new java.awt.Color(68, 115, 142));
+        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("En simulación...");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(175, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -358,6 +400,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

@@ -188,7 +188,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Debe llenar todos los campos", "Problema", JOptionPane.ERROR_MESSAGE);
                     validacion = false;
                 }
-                
+
             } else {
                 String modeloAvion = modelo.getValueAt(i, 0).toString();
                 String pasajeros = modelo.getValueAt(i, 1).toString();
@@ -199,7 +199,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
                 listaAviones.añadirCentral(avion);
             }
         }
-        
+
         if (validacion) {
             //Se abre la ventana principal del simulador
             jfrmPrincipal ventana = new jfrmPrincipal();
