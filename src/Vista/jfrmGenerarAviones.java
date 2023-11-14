@@ -90,6 +90,7 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
         btnIniciar.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
         btnIniciar.setForeground(new java.awt.Color(255, 255, 255));
         btnIniciar.setText("Deseo comenzar");
+        btnIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarActionPerformed(evt);
@@ -268,10 +269,10 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
 
   
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        if (validaciones() == true) {
-            leerDatos();
+        //if (validaciones() == true) {
+            //leerDatos();
 
-            /*//Se abre la ventana principal del simulador
+            //Se abre la ventana principal del simulador
             jfrmPrincipal ventana = new jfrmPrincipal();
             ventana.setVisible(true);
 
@@ -280,8 +281,8 @@ public class jfrmGenerarAviones extends javax.swing.JFrame {
             ventanaAnterior.dispose();
 
             //Se cierra la ventana actual
-            this.dispose();*/
-        }
+            this.dispose();
+      //  }
 
     }//GEN-LAST:event_btnIniciarActionPerformed
 

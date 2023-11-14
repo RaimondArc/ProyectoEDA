@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import java.awt.Color;
+import org.w3c.dom.css.RGBColor;
+
 /**
  *
  * @author valer
@@ -27,36 +30,47 @@ public class jfrmPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tblAvioneaPistaDespegue = new javax.swing.JTabbedPane();
         jpnlAvionesVuelo = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tblAvioneEnVuelo = new javax.swing.JTable();
+        lblTiulo1 = new javax.swing.JLabel();
+        lblAñadir1 = new javax.swing.JLabel();
         jpnlAvionesHangar = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tblAvionesEnHangar = new javax.swing.JTable();
+        lblTitulo2 = new javax.swing.JLabel();
+        lblAñadir2 = new javax.swing.JLabel();
         jpnlAvionesDespegue = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        tblAvionesPistaDespegue = new javax.swing.JTable();
+        lblTitulo3 = new javax.swing.JLabel();
+        lblAñadir3 = new javax.swing.JLabel();
         jpnlAvionesAterrizaje = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblAvionesPistaAterrizaje = new javax.swing.JTable();
+        lblTitulo4 = new javax.swing.JLabel();
+        lblAñadir4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTabbedPane1.setBackground(new java.awt.Color(53, 79, 100));
-        jTabbedPane1.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        tblAvioneaPistaDespegue.setBackground(new java.awt.Color(53, 79, 100));
+        tblAvioneaPistaDespegue.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(168, 194, 208)));
+        tblAvioneaPistaDespegue.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
 
-        jpnlAvionesVuelo.setBackground(new java.awt.Color(168, 194, 208));
+        jpnlAvionesVuelo.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable2.setBackground(new java.awt.Color(255, 255, 255));
-        jTable2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTable2.setForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tblAvioneEnVuelo.setBackground(new java.awt.Color(255, 255, 255));
+        tblAvioneEnVuelo.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        tblAvioneEnVuelo.setForeground(new java.awt.Color(0, 0, 0));
+        tblAvioneEnVuelo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -88,39 +102,67 @@ public class jfrmPrincipal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable2.setGridColor(new java.awt.Color(204, 204, 204));
-        jTable2.setRowHeight(25);
-        jTable2.setSelectionBackground(new java.awt.Color(28, 33, 53));
-        jTable2.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jTable2.setShowGrid(true);
-        jTable2.setShowVerticalLines(false);
-        jScrollPane2.setViewportView(jTable2);
+        tblAvioneEnVuelo.setGridColor(new java.awt.Color(204, 204, 204));
+        tblAvioneEnVuelo.setRowHeight(28);
+        tblAvioneEnVuelo.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        tblAvioneEnVuelo.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tblAvioneEnVuelo.setShowGrid(true);
+        tblAvioneEnVuelo.setShowVerticalLines(false);
+        jScrollPane2.setViewportView(tblAvioneEnVuelo);
+
+        lblTiulo1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        lblTiulo1.setForeground(new java.awt.Color(68, 115, 142));
+        lblTiulo1.setText("Lista de aviones en vuelo");
+
+        lblAñadir1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        lblAñadir1.setForeground(new java.awt.Color(68, 115, 142));
+        lblAñadir1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAñadir1.setText("Añadir avión");
+        lblAñadir1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAñadir1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAñadir1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAñadir1MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpnlAvionesVueloLayout = new javax.swing.GroupLayout(jpnlAvionesVuelo);
         jpnlAvionesVuelo.setLayout(jpnlAvionesVueloLayout);
         jpnlAvionesVueloLayout.setHorizontalGroup(
             jpnlAvionesVueloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnlAvionesVueloLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1353, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addGroup(jpnlAvionesVueloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTiulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+            .addGroup(jpnlAvionesVueloLayout.createSequentialGroup()
+                .addGap(625, 625, 625)
+                .addComponent(lblAñadir1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnlAvionesVueloLayout.setVerticalGroup(
             jpnlAvionesVueloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnlAvionesVueloLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesVueloLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(lblTiulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(lblAñadir1)
+                .addGap(28, 28, 28))
         );
 
-        jTabbedPane1.addTab("Aviones en Vuelo", jpnlAvionesVuelo);
+        tblAvioneaPistaDespegue.addTab("Aviones en Vuelo", jpnlAvionesVuelo);
 
-        jpnlAvionesHangar.setBackground(new java.awt.Color(168, 194, 208));
+        jpnlAvionesHangar.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable3.setBackground(new java.awt.Color(255, 255, 255));
-        jTable3.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTable3.setForeground(new java.awt.Color(0, 0, 0));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tblAvionesEnHangar.setBackground(new java.awt.Color(255, 255, 255));
+        tblAvionesEnHangar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        tblAvionesEnHangar.setForeground(new java.awt.Color(0, 0, 0));
+        tblAvionesEnHangar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -152,39 +194,68 @@ public class jfrmPrincipal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable3.setGridColor(new java.awt.Color(204, 204, 204));
-        jTable3.setRowHeight(25);
-        jTable3.setSelectionBackground(new java.awt.Color(28, 33, 53));
-        jTable3.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jTable3.setShowGrid(true);
-        jTable3.setShowVerticalLines(false);
-        jScrollPane3.setViewportView(jTable3);
+        tblAvionesEnHangar.setGridColor(new java.awt.Color(204, 204, 204));
+        tblAvionesEnHangar.setRowHeight(28);
+        tblAvionesEnHangar.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        tblAvionesEnHangar.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tblAvionesEnHangar.setShowGrid(true);
+        tblAvionesEnHangar.setShowVerticalLines(false);
+        jScrollPane3.setViewportView(tblAvionesEnHangar);
+
+        lblTitulo2.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        lblTitulo2.setForeground(new java.awt.Color(68, 115, 142));
+        lblTitulo2.setText("Lista de aviones en el hangar");
+
+        lblAñadir2.setBackground(new java.awt.Color(68, 115, 142));
+        lblAñadir2.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        lblAñadir2.setForeground(new java.awt.Color(68, 115, 142));
+        lblAñadir2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAñadir2.setText("Añadir avión");
+        lblAñadir2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAñadir2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAñadir2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAñadir2MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpnlAvionesHangarLayout = new javax.swing.GroupLayout(jpnlAvionesHangar);
         jpnlAvionesHangar.setLayout(jpnlAvionesHangarLayout);
         jpnlAvionesHangarLayout.setHorizontalGroup(
             jpnlAvionesHangarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesHangarLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(jpnlAvionesHangarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTitulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
+            .addGroup(jpnlAvionesHangarLayout.createSequentialGroup()
+                .addGap(634, 634, 634)
+                .addComponent(lblAñadir2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnlAvionesHangarLayout.setVerticalGroup(
             jpnlAvionesHangarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnlAvionesHangarLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesHangarLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(lblTitulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(lblAñadir2)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Aviones en Hangar", jpnlAvionesHangar);
+        tblAvioneaPistaDespegue.addTab("Aviones en Hangar", jpnlAvionesHangar);
 
-        jpnlAvionesDespegue.setBackground(new java.awt.Color(168, 194, 208));
+        jpnlAvionesDespegue.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable4.setBackground(new java.awt.Color(255, 255, 255));
-        jTable4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTable4.setForeground(new java.awt.Color(0, 0, 0));
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tblAvionesPistaDespegue.setBackground(new java.awt.Color(255, 255, 255));
+        tblAvionesPistaDespegue.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        tblAvionesPistaDespegue.setForeground(new java.awt.Color(0, 0, 0));
+        tblAvionesPistaDespegue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -216,39 +287,67 @@ public class jfrmPrincipal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable4.setGridColor(new java.awt.Color(204, 204, 204));
-        jTable4.setRowHeight(25);
-        jTable4.setSelectionBackground(new java.awt.Color(28, 33, 53));
-        jTable4.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jTable4.setShowGrid(true);
-        jTable4.setShowVerticalLines(false);
-        jScrollPane4.setViewportView(jTable4);
+        tblAvionesPistaDespegue.setGridColor(new java.awt.Color(204, 204, 204));
+        tblAvionesPistaDespegue.setRowHeight(28);
+        tblAvionesPistaDespegue.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        tblAvionesPistaDespegue.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tblAvionesPistaDespegue.setShowGrid(true);
+        tblAvionesPistaDespegue.setShowVerticalLines(false);
+        jScrollPane4.setViewportView(tblAvionesPistaDespegue);
+
+        lblTitulo3.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        lblTitulo3.setForeground(new java.awt.Color(68, 115, 142));
+        lblTitulo3.setText("Lista de aviones en la lista de despegue");
+
+        lblAñadir3.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        lblAñadir3.setForeground(new java.awt.Color(68, 115, 142));
+        lblAñadir3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAñadir3.setText("Añadir avión");
+        lblAñadir3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAñadir3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAñadir3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAñadir3MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpnlAvionesDespegueLayout = new javax.swing.GroupLayout(jpnlAvionesDespegue);
         jpnlAvionesDespegue.setLayout(jpnlAvionesDespegueLayout);
         jpnlAvionesDespegueLayout.setHorizontalGroup(
             jpnlAvionesDespegueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesDespegueLayout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+            .addGroup(jpnlAvionesDespegueLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(jpnlAvionesDespegueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTitulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
+            .addGroup(jpnlAvionesDespegueLayout.createSequentialGroup()
+                .addGap(624, 624, 624)
+                .addComponent(lblAñadir3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnlAvionesDespegueLayout.setVerticalGroup(
             jpnlAvionesDespegueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnlAvionesDespegueLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesDespegueLayout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(lblTitulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblAñadir3)
+                .addGap(33, 33, 33))
         );
 
-        jTabbedPane1.addTab("Aviones en Pista de Despegue", jpnlAvionesDespegue);
+        tblAvioneaPistaDespegue.addTab("Aviones en Pista de Despegue", jpnlAvionesDespegue);
 
-        jpnlAvionesAterrizaje.setBackground(new java.awt.Color(168, 194, 208));
+        jpnlAvionesAterrizaje.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblAvionesPistaAterrizaje.setBackground(new java.awt.Color(255, 255, 255));
+        tblAvionesPistaAterrizaje.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        tblAvionesPistaAterrizaje.setForeground(new java.awt.Color(0, 0, 0));
+        tblAvionesPistaAterrizaje.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -280,32 +379,62 @@ public class jfrmPrincipal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setGridColor(new java.awt.Color(204, 204, 204));
-        jTable1.setRowHeight(25);
-        jTable1.setSelectionBackground(new java.awt.Color(28, 33, 53));
-        jTable1.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        jTable1.setShowGrid(true);
-        jTable1.setShowVerticalLines(false);
-        jScrollPane1.setViewportView(jTable1);
+        tblAvionesPistaAterrizaje.setGridColor(new java.awt.Color(204, 204, 204));
+        tblAvionesPistaAterrizaje.setRowHeight(28);
+        tblAvionesPistaAterrizaje.setSelectionBackground(new java.awt.Color(28, 33, 53));
+        tblAvionesPistaAterrizaje.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        tblAvionesPistaAterrizaje.setShowGrid(true);
+        tblAvionesPistaAterrizaje.setShowVerticalLines(false);
+        jScrollPane1.setViewportView(tblAvionesPistaAterrizaje);
+
+        lblTitulo4.setBackground(new java.awt.Color(255, 255, 255));
+        lblTitulo4.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        lblTitulo4.setForeground(new java.awt.Color(68, 115, 142));
+        lblTitulo4.setText("Lista de aviones en la pista de aterrizaje");
+
+        lblAñadir4.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        lblAñadir4.setForeground(new java.awt.Color(68, 115, 142));
+        lblAñadir4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAñadir4.setText("Añadir avión");
+        lblAñadir4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAñadir4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAñadir4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAñadir4MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpnlAvionesAterrizajeLayout = new javax.swing.GroupLayout(jpnlAvionesAterrizaje);
         jpnlAvionesAterrizaje.setLayout(jpnlAvionesAterrizajeLayout);
         jpnlAvionesAterrizajeLayout.setHorizontalGroup(
             jpnlAvionesAterrizajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnlAvionesAterrizajeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGroup(jpnlAvionesAterrizajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnlAvionesAterrizajeLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(jpnlAvionesAterrizajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTitulo4, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jpnlAvionesAterrizajeLayout.createSequentialGroup()
+                        .addGap(632, 632, 632)
+                        .addComponent(lblAñadir4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jpnlAvionesAterrizajeLayout.setVerticalGroup(
             jpnlAvionesAterrizajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnlAvionesAterrizajeLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnlAvionesAterrizajeLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(lblTitulo4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(lblAñadir4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Aviones en Pista de Despegue", jpnlAvionesAterrizaje);
+        tblAvioneaPistaDespegue.addTab("Aviones en Pista de Despegue", jpnlAvionesAterrizaje);
 
         jPanel1.setBackground(new java.awt.Color(53, 79, 100));
 
@@ -331,14 +460,39 @@ public class jfrmPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jButton1.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        jButton1.setText("Configuración");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        jButton2.setText("Salir");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(tblAvioneaPistaDespegue, javax.swing.GroupLayout.PREFERRED_SIZE, 1382, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -346,8 +500,12 @@ public class jfrmPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addComponent(tblAvioneaPistaDespegue, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(29, 29, 29))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -363,6 +521,48 @@ public class jfrmPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jfrmConfiguración ventana = new jfrmConfiguración();
+        ventana.setVisible(true);
+        //this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void lblAñadir2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir2MouseEntered
+        lblAñadir2.setForeground(new java.awt.Color(232, 114, 69));
+    }//GEN-LAST:event_lblAñadir2MouseEntered
+
+    private void lblAñadir2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir2MouseExited
+        lblAñadir2.setForeground(new java.awt.Color(68, 115, 142));
+    }//GEN-LAST:event_lblAñadir2MouseExited
+
+    private void lblAñadir1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir1MouseEntered
+       lblAñadir1.setForeground(new java.awt.Color(232, 114, 69));
+    }//GEN-LAST:event_lblAñadir1MouseEntered
+
+    private void lblAñadir1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir1MouseExited
+        lblAñadir1.setForeground(new java.awt.Color(68, 115, 142));
+    }//GEN-LAST:event_lblAñadir1MouseExited
+
+    private void lblAñadir3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir3MouseEntered
+        lblAñadir3.setForeground(new java.awt.Color(232, 114, 69));
+    }//GEN-LAST:event_lblAñadir3MouseEntered
+
+    private void lblAñadir3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir3MouseExited
+        lblAñadir3.setForeground(new java.awt.Color(68, 115, 142));
+    }//GEN-LAST:event_lblAñadir3MouseExited
+
+    private void lblAñadir4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir4MouseEntered
+        lblAñadir4.setForeground(new java.awt.Color(232, 114, 69));
+    }//GEN-LAST:event_lblAñadir4MouseEntered
+
+    private void lblAñadir4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAñadir4MouseExited
+        lblAñadir4.setForeground(new java.awt.Color(68, 115, 142));
+    }//GEN-LAST:event_lblAñadir4MouseExited
 
     /**
      * @param args the command line arguments
@@ -400,6 +600,8 @@ public class jfrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -407,14 +609,22 @@ public class jfrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JPanel jpnlAvionesAterrizaje;
     private javax.swing.JPanel jpnlAvionesDespegue;
     private javax.swing.JPanel jpnlAvionesHangar;
     private javax.swing.JPanel jpnlAvionesVuelo;
+    private javax.swing.JLabel lblAñadir1;
+    private javax.swing.JLabel lblAñadir2;
+    private javax.swing.JLabel lblAñadir3;
+    private javax.swing.JLabel lblAñadir4;
+    private javax.swing.JLabel lblTitulo2;
+    private javax.swing.JLabel lblTitulo3;
+    private javax.swing.JLabel lblTitulo4;
+    private javax.swing.JLabel lblTiulo1;
+    private javax.swing.JTable tblAvioneEnVuelo;
+    private javax.swing.JTabbedPane tblAvioneaPistaDespegue;
+    private javax.swing.JTable tblAvionesEnHangar;
+    private javax.swing.JTable tblAvionesPistaAterrizaje;
+    private javax.swing.JTable tblAvionesPistaDespegue;
     // End of variables declaration//GEN-END:variables
 }
