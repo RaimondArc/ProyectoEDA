@@ -96,11 +96,11 @@ public class jfrmConfiguración extends javax.swing.JFrame {
 
         lblCantidadPasajeros.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         lblCantidadPasajeros.setForeground(new java.awt.Color(53, 79, 100));
-        lblCantidadPasajeros.setText("Cantidad de Pasajeros");
+        lblCantidadPasajeros.setText("Cantidad de pasajeros");
 
         lblCantidadSobrecargos.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         lblCantidadSobrecargos.setForeground(new java.awt.Color(53, 79, 100));
-        lblCantidadSobrecargos.setText("Cantidad de Sobrecargos");
+        lblCantidadSobrecargos.setText("Cantidad de sobrecargos");
 
         lblNombrePiloto.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         lblNombrePiloto.setForeground(new java.awt.Color(53, 79, 100));
@@ -256,26 +256,26 @@ public class jfrmConfiguración extends javax.swing.JFrame {
     
         public boolean validaciones() {
         byte estado = 1;
-        if (txtModelo.getText().compareTo("  Texto") == 0) {
+        if (txtModelo.getText().compareTo("  Texto") == 0 || txtModelo.getText().compareTo("") == 0) {
             txtModelo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 0, 0)));
             estado = 0;
         } else {
             txtModelo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         }
-        if (txtPasajeros.getText().compareTo("  Cantidad") == 0) {
+        if (txtPasajeros.getText().compareTo("  Cantidad") == 0 || txtPasajeros.getText().compareTo("") == 0) {
             txtPasajeros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 0, 0)));
             estado = 0;
         } else {
             txtPasajeros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         }
-        if (txtSobrecargos.getText().compareTo("  Cantidad") == 0) {
+        if (txtSobrecargos.getText().compareTo("  Cantidad") == 0 || txtSobrecargos.getText().compareTo("") == 0) {
             txtSobrecargos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 0, 0)));
             estado = 0;
         } else {
             txtSobrecargos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         }
-        if (txtPiloto.getText().compareTo("  Texto") == 0) {
+        if (txtPiloto.getText().compareTo("  Texto") == 0 || txtPiloto.getText().compareTo("") == 0) {
             txtPiloto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(237, 0, 0)));
             estado = 0;
         } else {

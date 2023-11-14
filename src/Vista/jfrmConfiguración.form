@@ -237,7 +237,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="64" green="4f" red="35" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cantidad de Pasajeros"/>
+                <Property name="text" type="java.lang.String" value="Cantidad de pasajeros"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCantidadSobrecargos">
@@ -248,7 +248,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="64" green="4f" red="35" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cantidad de Sobrecargos"/>
+                <Property name="text" type="java.lang.String" value="Cantidad de sobrecargos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNombrePiloto">
